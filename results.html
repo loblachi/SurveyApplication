@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Results Page</title>
+    <link rel="stylesheet" href="./css-files/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bg">
+        <div class="container">
+            <div class="nav-flex">
+                <div class="nav-title">
+                    <a href="./index.html">_Surveys</a>
+                </div>
+            
+                <div class="nav-links">
+                    <a href="./index.html" class="fill-out-link"> FILL OUT SURVEY</a>
+                    <a href="./results.html" class="view-results-link current-page"> VIEW SURVEY RESULTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-bg">
+        <div class="container">
+            <div class="form-flex">
+                <div class="results-div">
+                    <h4>Survey Results</h4>
+                    <div class="results-info-div"> 
+                        <span>Total number of surveys :</span> <span class="float-right totalSurveys">#Surveys</span> <br><div class="div-space"></div>
+                        <span>Average Age :</span> <span class="float-right averageAge">#Surveys</span> <br> <div class="div-space"></div>
+                        <span>Oldest person who participated in survey :</span> <span class="float-right oldestPerson" >#Surveys</span> <br><div class="div-space"></div>
+                        <span>Youngest person who participated in survey :</span> <span class="float-right youngestPerson" >#Surveys</span> <br><div class="div-space"></div>
+                        <br><div class="div-space"></div>
+                        <span>Percentage of people who like Pizza :</span> <span class="float-right percPizza" >#Surveys</span> <br><div class="div-space"></div>
+                        <span>Percentage of people who like Pasta :</span> <span class="float-right percPasta" >#Surveys</span> <br><div class="div-space"></div>
+                        <span>Percentage of people who like Pap and Wors :</span> <span class="float-right percPap" >#Surveys</span> <br><div class="div-space"></div>
+                        <br><div class="div-space"></div>
+                        <span>People who like to watch movies :</span> <span class="float-right likeMovies" >#Surveys</span> <br><div class="div-space"></div>
+                        <span>People who like to listen to radio :</span> <span class="float-right likeRadio" >#Surveys</span> <br><div class="div-space"></div>
+                        <span>People who like to eat out :</span> <span class="float-right likeEatOut" >#Surveys</span> <br><div class="div-space"></div>
+                        <span>People who like to watch TV :</span> <span class="float-right likeWatchTV" >#Surveys</span> <br><div class="div-space"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+  <div id="loader"> <!-- For loading to the next page -->
+    <div class="spinner"></div>
+  </div>
+
+    <script src="./js-files/results.js" type="module" ></script>
+</body>
+</html>

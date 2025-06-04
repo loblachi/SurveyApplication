@@ -1,0 +1,260 @@
+*{
+    margin:0; 
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    box-sizing: border-box;
+
+    --colorBlue : #5fb7ff; 
+    --colorWhiteBg : ; 
+    --colorGrey: #D7D7D7; 
+
+}
+.nav-bg{
+    height: 5rem;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.container{
+    height: 100%;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1200px;
+}
+.nav-flex{
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-title, .nav-links{
+}
+.nav-title a{
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.nav-links a{
+    display: inline-block;
+    border: 1px solid transparent;
+    margin-left: .25rem;
+    text-decoration: none;
+    padding: .75rem 1.25rem;
+}
+.nav-links a:hover{
+    color: var(--colorBlue);
+}
+.current-page{
+    color: var(--colorBlue) ;
+}
+/* The form code *********************/
+.form-bg{
+    padding: 3rem 0rem ; 
+}
+
+.form-flex form{
+   display: flex;
+   flex-direction: column;
+}
+.Personal-div{
+    display: flex;
+    gap: 0rem 7.5rem;
+}
+.Personal-div h4{
+    font-weight: 500;
+}
+.Personal-info{
+}
+.Personal-info input{
+    width: 15rem;
+    padding: .25rem .25rem .25rem .5rem;
+    margin-bottom: .8rem;
+    border-radius: .25rem;
+    border: 1px solid var(--colorBlue);
+}
+.fav-food{
+    margin: 1.25rem 0rem;
+}
+.fav-food input[type="checkbox"]{
+    accent-color: var(--colorBlue);
+    transform: scale(1.1);
+}
+.fav-food span{
+    margin-right: 2rem;
+    padding: 0rem .25rem;
+}
+
+.random-h4-info{
+    margin: 1.5rem 0rem;
+    font-weight: 500;
+    word-spacing: .1rem;
+}
+
+.table-container{
+    overflow-x: auto;
+}
+.table-info{
+     min-width: 800px;
+      width: 90%;
+      table-layout: fixed; /* Enforce defined widths */
+      border-collapse: collapse;
+      border: 1px solid #ccc;
+    }
+
+    th{
+        background-color: var(--colorGrey);
+        border: 1px solid black;
+    }
+    td{
+        border: 1px solid var(--colorBlue);
+        text-align: center;
+    }
+    th, td {
+      font-weight: 500;
+      padding: .3rem .25rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    /* Make the first column wider */
+    th:first-child, td:first-child {
+      width: 50%; /* or any width you prefer */
+    }
+
+    /* All other columns share the remaining space equally */
+    th:not(:first-child), td:not(:first-child) {
+      width: 25%;
+    }
+    .table-body input{
+        accent-color: var(--colorBlue);
+        transform: scale(1.5);
+        margin-right: 8px;
+    }
+.submit-div{
+    margin-top: 2rem;
+    text-align: center;
+}
+.submit-div button{
+    padding: .5rem 2rem;
+    border: none;
+    color: white;
+    background-color: var(--colorBlue);
+    transition: all .3s;
+}
+.submit-div button:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #448eca;
+}
+.error-message{
+    color: rgb(180, 0, 0);
+    font-size: .75rem;
+    height: .8rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*********** results page css ***************/
+.results-div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.results-div h4{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.results-info-div{
+    width: 65%;
+    justify-content: space-between;
+}
+.results-info-div span{
+}
+.float-right{
+    float:right;
+}
+.div-space{
+    margin: .8rem 0rem;
+}
+
+
+
+/************************** Media queries ********************/ 
+@media ( max-width: 950px){
+    .container{
+        width: 95%;
+    }
+   .table-info{
+    width: 100%;
+   }
+}
+@media (max-width: 700px){
+    .results-info-div{
+    width: 95%;
+    }
+    .results-info-div span:nth-of-type(odd) {
+      display: inline-block;
+      width: 25ch;
+    }
+    .results-info-div span:nth-of-type(even) {
+      display: inline-block;
+      display: flex;
+      align-items: end;
+    }
+    .Personal-div{
+    display: flex;
+    gap: 0rem 2rem;
+}
+}
+
+
+
+
+
+
+
+/*************************** css loader **********************/ 
+#loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    /* Spinner animation       */
+    .spinner {
+      border: 8px solid #eee;
+      border-top: 8px solid lightblue;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    /* Hide loader after page load */
+    body.loaded #loader {
+      display: none;
+    }

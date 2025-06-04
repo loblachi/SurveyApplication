@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Page</title>
+    <link rel="stylesheet" href="./css-files/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-bg">
+        <div class="container">
+            <div class="nav-flex">
+                <div class="nav-title">
+                    <a href="./index.html">_Surveys</a>
+                </div>
+            
+                <div class="nav-links">
+                    <a href="./index.html" class="fill-out-link current-page"> FILL OUT SURVEY</a>
+                    <a href="./results.html" class="view-results-link"> VIEW SURVEY RESULTS</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="form-bg">
+        <div class="container">
+            <div class="form-flex">
+                <form id="survey-form">
+                   <div class="Personal-div">
+                    <h4>Personal Details : </h4>
+                    <div class="Personal-info">
+                        <p>Full Names</p>
+                        <input type="text" minlength="3" class="full-names resClass" required>
+                        <p>Email</p>
+                        <input type="email" class="email resClass" required>
+                        <p>Date of Birth</p>
+                        <input type="date" class="date resClass" required>
+                        <p class="error-message-date error-message" error-message></p>
+                        <p>Contact Number</p>
+                        <input type="tel"  class="number resClass" required>
+                        <p class="error-message-contact error-message" error-message></p>
+                    </div>
+                   </div>
+                   <div class="fav-food">
+                    <span>What is your favorite food ?</span>
+                        <input type="checkbox" class="fav-food-checkbox" value="Pizza"><span>Pizza</span> 
+                        <input type="checkbox" class="fav-food-checkbox" value="Pasta"><span>Pasta</span> 
+                        <input type="checkbox" class="fav-food-checkbox" value="Pap and Wors"><span>Pap and Wors</span> 
+                        <input type="checkbox" class="fav-food-checkbox" value="Other"><span>Other</span> 
+                   </div>
+                   <p class="error-message-favFood error-message"></p>
+
+                   <h4 class="random-h4-info">Please rate your level of agreement on a scale from 1 to 5, with 1 being "strongly agree" and 5 being "strongly disagree".</h4>
+                    <div class="table-container">
+                        <table class="table-info">
+                            <thead class="table-head">
+                                <tr>
+                                <th class="td-prompt"></th>
+                                <th>Strongly Agree</th>
+                                <th>Agree</th>
+                                <th>Neutral</th>
+                                <th>Disagree</th>
+                                <th>Strongly Disagree</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-body">
+                                <tr>
+                                <td class="td-prompt">I like to watch movies</td>
+                                <td><input type="radio" name="watch-movies" value="1"></td>
+                                <td><input type="radio" name="watch-movies" value="2"></td>
+                                <td><input type="radio" name="watch-movies" value="3"></td>
+                                <td><input type="radio" name="watch-movies" value="4"></td>
+                                <td><input type="radio" name="watch-movies" value="5"></td>
+                                </tr>
+                                <tr>
+                                <td class="td-prompt">I like to listen to radio</td>
+                                <td><input type="radio" name="listen-radio" value="1"></td>
+                                <td><input type="radio" name="listen-radio" value="2"></td>
+                                <td><input type="radio" name="listen-radio" value="3"></td>
+                                <td><input type="radio" name="listen-radio" value="4"></td>
+                                <td><input type="radio" name="listen-radio" value="5"></td>
+                                </tr>
+                                <tr>
+                                <td class="td-prompt">I like to eat out</td>
+                                <td><input type="radio" name="eat-out" value="1"></td>
+                                <td><input type="radio" name="eat-out" value="2"></td>
+                                <td><input type="radio" name="eat-out" value="3"></td>
+                                <td><input type="radio" name="eat-out" value="4"></td>
+                                <td><input type="radio" name="eat-out" value="5"></td>
+                                </tr>
+                                <tr>
+                                <td class="td-prompt">I like to watch TV</td>
+                                <td><input type="radio" name="watch-tv" value="1"></td>
+                                <td><input type="radio" name="watch-tv" value="2"></td>
+                                <td><input type="radio" name="watch-tv" value="3"></td>
+                                <td><input type="radio" name="watch-tv" value="4"></td>
+                                <td><input type="radio" name="watch-tv" value="5"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="error-message-radio error-message"></p>
+                   <div class="submit-div">
+                      <button type="submit">SUBMIT</button>
+                   </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+  <div id="loader"> <!-- For loading to the next page -->
+    <div class="spinner"></div>
+  </div>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="./js-files/index.js" type="module"></script>
+</body>
+</html>
